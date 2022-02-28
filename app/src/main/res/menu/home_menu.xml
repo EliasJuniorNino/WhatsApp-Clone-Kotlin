@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuItem_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/search"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuItem_new_group"
+        android:title="@string/new_group" />
+
+    <item
+        android:id="@+id/menuItem_new_transmission"
+        android:title="@string/new_transmission" />
+
+    <item
+        android:id="@+id/menuItem_connected_devices"
+        android:title="@string/connected_devices" />
+
+    <item
+        android:id="@+id/menuItem_favorite_messages"
+        android:title="@string/favorite_messages" />
+
+    <item
+        android:id="@+id/menuItem_payments"
+        android:title="@string/payments" />
+
+    <item
+        android:id="@+id/menuItem_settings"
+        android:title="@string/settings" />
+
+</menu>
