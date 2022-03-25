@@ -8,7 +8,11 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.eliasjuniornino.zapzap.databinding.FragmentHomeBinding
 import com.eliasjuniornino.zapzap.ui.home.adapter.HomePagerAdapter
-import com.eliasjuniornino.zapzap.ui.home.tabs.*
+import com.eliasjuniornino.zapzap.ui.home.tabs.BaseTabListFragment
+import com.eliasjuniornino.zapzap.ui.home.tabs.CallsListFragment
+import com.eliasjuniornino.zapzap.ui.home.tabs.CameraFragment
+import com.eliasjuniornino.zapzap.ui.home.tabs.ChatListFragment
+import com.eliasjuniornino.zapzap.ui.home.tabs.StatusListFragment
 import com.google.android.material.tabs.TabLayoutMediator
 
 class HomeFragment : Fragment() {
