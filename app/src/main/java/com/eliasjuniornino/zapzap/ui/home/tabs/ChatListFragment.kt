@@ -9,6 +9,7 @@ import androidx.fragment.app.activityViewModels
 import com.eliasjuniornino.zapzap.R
 import com.eliasjuniornino.zapzap.databinding.FragmentChatListBinding
 import com.eliasjuniornino.zapzap.ui.home.adapter.ChatListAdapter
+import com.google.android.material.tabs.TabLayout
 
 /**
  * A simple [Fragment] subclass.
@@ -16,9 +17,11 @@ import com.eliasjuniornino.zapzap.ui.home.adapter.ChatListAdapter
  * create an instance of this fragment.
  */
 class ChatListFragment : BaseTabListFragment() {
-    override fun getTabTitleRes(): Int = R.string.chats
+    override fun tabLayoutBind(tab: TabLayout.Tab) {
+        tab.setText(R.string.chats)
+    }
 
-    lateinit var binding: FragmentChatListBinding
+    private lateinit var binding: FragmentChatListBinding
     private val viewModel: ChatListFragmentViewModel by activityViewModels()
 
     private lateinit var chatListAdapter: ChatListAdapter
