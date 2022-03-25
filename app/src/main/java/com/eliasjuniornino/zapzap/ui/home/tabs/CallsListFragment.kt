@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.eliasjuniornino.zapzap.R
 import com.eliasjuniornino.zapzap.databinding.FragmentCallsListBinding
+import com.google.android.material.tabs.TabLayout
 
 /**
  * A simple [Fragment] subclass.
@@ -14,7 +15,9 @@ import com.eliasjuniornino.zapzap.databinding.FragmentCallsListBinding
  * create an instance of this fragment.
  */
 class CallsListFragment : BaseTabListFragment() {
-    override fun getTabTitleRes(): Int = R.string.calls
+    override fun tabLayoutBind(tab: TabLayout.Tab) {
+        tab.setText(R.string.calls)
+    }
 
     lateinit var binding: FragmentCallsListBinding
 

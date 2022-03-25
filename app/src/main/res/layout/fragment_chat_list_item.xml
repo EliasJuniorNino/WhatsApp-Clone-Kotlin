@@ -7,23 +7,30 @@
     android:orientation="horizontal"
     tools:showIn="@layout/fragment_chat_list">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/image"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/imageContainer"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginVertical="12dp"
-        android:src="@drawable/blank_profile_picture" />
+        app:cardCornerRadius="64dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/blank_profile_picture" />
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/image"
+        android:layout_alignTop="@id/imageContainer"
         android:layout_marginStart="12dp"
         android:layout_toStartOf="@id/date"
         android:layout_toLeftOf="@id/date"
-        android:layout_toEndOf="@id/image"
-        android:layout_toRightOf="@id/image"
+        android:layout_toEndOf="@id/imageContainer"
+        android:layout_toRightOf="@id/imageContainer"
         android:ellipsize="end"
         android:lines="1"
         android:textSize="18sp"
@@ -50,20 +57,26 @@
         android:layout_below="@id/name"
         android:layout_alignLeft="@id/name"
         android:layout_marginTop="4dp"
-        android:layout_toStartOf="@id/soundIcon"
-        android:layout_toLeftOf="@id/soundIcon"
+        android:layout_toStartOf="@id/iconContainer"
+        android:layout_toLeftOf="@id/iconContainer"
         android:ellipsize="end"
         android:lines="1"
         tools:text="+55 66 0000-0000: Como eu disse, Thanos não é inevitavel. GGWP!" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/soundIcon"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/iconContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/lastMessage"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="4dp"
-        android:tint="@color/grey_600"
-        app:srcCompat="@drawable/ic_baseline_volume_mute_24" />
+        android:layout_marginStart="4dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/soundIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/grey_600"
+            app:srcCompat="@drawable/ic_baseline_volume_mute_24" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </RelativeLayout>
